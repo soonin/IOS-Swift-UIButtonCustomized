@@ -10,9 +10,21 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    @IBOutlet weak var editBtn: UIButton!
+    @IBOutlet weak var deleteBtn: UIButton!
+    @IBOutlet weak var refreshBtn: UIButton!
+    @IBOutlet weak var lockBtn: UIButton!
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+    
+        editBtn.setToDelete()
+        
+        deleteBtn.setToAdd()
+        
+        refreshBtn.setToEdit()
+        
+        lockBtn.setToLock()
+        
     }
 
 

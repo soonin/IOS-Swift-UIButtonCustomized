@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -9,16 +12,64 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="IOS_Swift_UIButtonCustomized" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="eeI-lQ-bP1">
+                                <rect key="frame" x="91.5" y="228.5" width="192" height="210"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kvs-Ur-pI0">
+                                        <rect key="frame" x="0.0" y="0.0" width="192" height="45"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="45" id="Jk1-ZZ-jjn"/>
+                                        </constraints>
+                                        <state key="normal" title="Button 1"/>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0Fn-QV-sqE">
+                                        <rect key="frame" x="0.0" y="55" width="192" height="45"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="45" id="YSU-6N-VF8"/>
+                                        </constraints>
+                                        <state key="normal" title="Button 2"/>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GRz-3g-jsy">
+                                        <rect key="frame" x="0.0" y="110" width="192" height="45"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="192" id="XAY-b6-8CI"/>
+                                            <constraint firstAttribute="height" constant="45" id="igu-zp-T2a"/>
+                                        </constraints>
+                                        <state key="normal" title="Button 3"/>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yuB-Eg-FoR">
+                                        <rect key="frame" x="0.0" y="165" width="192" height="45"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="45" id="BNA-Bk-bIC"/>
+                                            <constraint firstAttribute="width" constant="192" id="bzr-Ty-yMs"/>
+                                        </constraints>
+                                        <state key="normal" title="Button 4"/>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.0048598507420000003" green="0.096086271109999996" blue="0.57499289509999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="eeI-lQ-bP1" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Drd-OJ-dm3"/>
+                            <constraint firstItem="eeI-lQ-bP1" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="R6s-0e-LZK"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="deleteBtn" destination="0Fn-QV-sqE" id="Zu0-x9-Dfc"/>
+                        <outlet property="editBtn" destination="kvs-Ur-pI0" id="VFS-D5-xIU"/>
+                        <outlet property="lockBtn" destination="yuB-Eg-FoR" id="t8h-fb-41x"/>
+                        <outlet property="refreshBtn" destination="GRz-3g-jsy" id="CMU-5L-GJ3"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="133.59999999999999" y="133.5832083958021"/>
         </scene>
     </scenes>
 </document>
